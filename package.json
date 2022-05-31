@@ -1,0 +1,35 @@
+{
+  "name": "gb-frontend-bundle-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexyasinsky/GB-frontend-Bundle-tools.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexyasinsky/GB-frontend-Bundle-tools/issues"
+  },
+  "homepage": "https://github.com/alexyasinsky/GB-frontend-Bundle-tools#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.52.1",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  },
+  "dependencies": {
+    "howler": "^2.2.3",
+    "luxon": "^2.4.0"
+  }
+}
