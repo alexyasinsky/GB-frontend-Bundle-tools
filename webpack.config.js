@@ -1,6 +1,8 @@
 const path = require('path');
 const CopyPlugin = require("copy-webpack-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 
 module.exports = {
   entry: './src/index.js',
@@ -8,18 +10,15 @@ module.exports = {
    filename: 'main.[contenthash].js',
    path: path.resolve(__dirname, 'dist'),
   },
-  mode: 'production',
+  mode: 'development',
   devtool: "source-map",
   module: {
     rules: [
       {
         test: /\.s[ac]ss$/i,
         use: [
-          // Creates `style` nodes from JS strings
-          "style-loader",
-          // Translates CSS into CommonJS
+          MiniCssExtractPlugin.loader,
           "css-loader",
-          // Compiles Sass to CSS
           "sass-loader",
         ],
       },
@@ -32,8 +31,18 @@ module.exports = {
       ],
     }),
     new HtmlWebpackPlugin({
-        template: 'src/index.html'
+        template: path.resolve(`${__dirname}/src/index.html`)
       }),
+    new MiniCssExtractPlugin({
+      filename: 'main.[contenthash].css'
+    }),
 
   ],
+
+  devServer: {
+    hot: true,
+    open: true,
+    watchFiles: ['./src/*']
+  }
+
  }
