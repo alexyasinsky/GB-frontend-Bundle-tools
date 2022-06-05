@@ -1,3 +1,44 @@
-#datecalc {
-    display: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: red;
+  text-align: center;
+}
+
+.gallery {
+  &__box {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  &__item {
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    border: 1px solid black;
+    h4 {
+      text-align: center;
+    }
+    img {
+      width: -webkit-fill-available;
+      height: 200px;
+    }
+    audio {
+      width: -webkit-fill-available;
+      height: 100px;
+      margin-bottom: 100px;
+    }
+    video {
+      width: -webkit-fill-available;
+      height: 200px;
+    }
+}
 }
