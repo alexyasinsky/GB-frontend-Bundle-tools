@@ -1,6 +1,7 @@
 import {handleCalcDates} from "./js/datecalc.js";
 import {routerButtonHandler} from "./js/router.js";
 import handleTimer from './js/timer.js';
+import './styles/style.scss';
 
 const dateCalcForm = document.getElementById("datecalc");
 const dateCalcResult = document.getElementById("datecalc__result");

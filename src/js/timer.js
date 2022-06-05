@@ -1,9 +1,11 @@
+import {Howl} from 'howler';
+
 let timerIntervalId;
 let timerEndId;
 
 function getBellSound() {
   const sound = new Howl({
-    src: ['bell-sound.mp3']
+    src: ['assets/bell-sound.mp3']
   });
   return sound.play();
 }
